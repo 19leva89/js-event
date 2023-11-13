@@ -144,24 +144,20 @@ router.get('/focus', function (req, res) {
 	})
 })
 
-
-
-
+router.get('/keyboard', function (req, res) {
+	res.render('keyboard', {
+		name: 'keyboard',
+		component: [],
+		title: 'Тип події: Введення з клавіатури',
+		data: {},
+	})
+})
 
 router.get('/mouse', function (req, res) {
 	res.render('mouse', {
 		name: 'mouse',
 		component: [],
 		title: 'Тип події: Взаємодія з мишкою',
-		data: {},
-	})
-})
-
-router.get('/key', function (req, res) {
-	res.render('key', {
-		name: 'key',
-		component: [],
-		title: 'Тип події: Введення з клавіатури',
 		data: {},
 	})
 })
@@ -202,15 +198,6 @@ router.get('/wheel', function (req, res) {
 	})
 })
 
-router.get('/touch', function (req, res) {
-	res.render('touch', {
-		name: 'touch',
-		component: [],
-		title: 'Тип події: Взаємодія з сенсорним пристроєм',
-		data: {},
-	})
-})
-
 router.get('/transition', function (req, res) {
 	res.render('transition', {
 		name: 'transition',
@@ -220,20 +207,11 @@ router.get('/transition', function (req, res) {
 	})
 })
 
-router.get('/progress', function (req, res) {
-	res.render('progress', {
-		name: 'progress',
+router.get('/touch', function (req, res) {
+	res.render('touch', {
+		name: 'touch',
 		component: [],
-		title: 'Тип події: Відстеження прогресу',
-		data: {},
-	})
-})
-
-router.get('/10', function (req, res) {
-	res.render('10', {
-		name: '10',
-		component: [],
-		title: 'Тип події: Виділення тексту',
+		title: 'Тип події: Взаємодія з сенсорним пристроєм',
 		data: {},
 	})
 })
